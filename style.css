@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: Geist, sans-serif;
     color: #050505;
+    scroll-behavior: smooth;
 }
 
 a,
@@ -143,7 +144,7 @@ nav ul li a:hover {
     background: #fff;
     padding: 60px;
     display: flex;
-    height: calc(100vh - 140.5px);
+    min-height: calc(100vh - 140.5px);
     gap: clamp(20px, calc(12.5vw - 130px), 110px);
 }
 
@@ -1112,7 +1113,7 @@ footer nav ul {
 
     .intro {
         flex-direction: column;
-        height: auto;
+        min-height: auto;
     }
 
     .intro-right {
@@ -1213,5 +1214,19 @@ footer nav ul {
 
     .contact-form button {
         width: 100%;
+    }
+
+    .question-item span,
+    .question-item p {
+        font-size: 14px;
+    }
+
+    .question-item p {
+        height: 40px;
+        display: flex;
+        align-items: center;
+    }
+    .question-item {
+        max-height: 74px;
     }
 }
